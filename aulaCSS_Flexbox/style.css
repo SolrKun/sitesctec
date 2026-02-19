@@ -1,0 +1,37 @@
+.container {
+    background-color: rgb(118, 167, 207);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: row; /* serve para saber a direção dos itens (linha / coluna) */
+    /* flex-direction: row | row-reverse | column | column-reverse */
+    /* justify-content: space-around; serve para modificar a posição horizontalmente */
+    align-items: stretch; /* modifica a posição verticalmente */
+    flex-wrap: wrap; /* quebra de linha */
+    align-content: center; /* modifica a posição dos itens na quebra de linha */
+    gap: 10px;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+    border: 3px solid black;
+}
+
+#box1 {
+    background-color: aquamarine;
+    flex-grow: 1;
+}
+
+#box2 {
+    background-color: lightblue;
+    flex-grow: 3;
+}
+
+#box3 {
+    background-color: yellow;
+    flex-grow: 1;
+}
