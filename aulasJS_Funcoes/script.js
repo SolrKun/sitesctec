@@ -1,12 +1,18 @@
-function verificaAprovacao () {
-    let nota = document.getElementById("nota").value;
-    console.log("Nota inserida: ", nota);
+function mostrarSaudacao () {
+    const nome = document.getElementById("nome").value;
+    const hora = parseInt(document.getElementById("hora").value,10);
+    const mensagem = document.getElementById("mensagem")
+    mensagem.innerHTML = saudacaoPersonalizada(nome, hora);
+}
 
-    if (nota => 7) {
-        document.getElementById("resultado").innerHTML = "Aluno(a) aprovado(a).";
-        alert("Aluno(a) aprovado(a)!");
+function saudacaoPersonalizada (nome, hora) {
+    if (hora < 12) {
+        return "Bom dia, " + nome + "!";
+    } else if (hora > 12 && hora < 18) {
+        return "Boa tarde, " + nome + "!";
+    } else if (hora > 18) {
+        return "Boa noite, " + nome + "!";
     } else {
-        document.getElementById("resultado").innerHTML = "Aluno(a) reprovado(a).";
-        alert("Aluno(a) reprovado(a)!");
+        return "";
     }
 }
