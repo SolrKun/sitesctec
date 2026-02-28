@@ -18,7 +18,7 @@ function buscaDadosdoServidor() {
         console.log("Buscando dados no servidor");
 
         setTimeout(() => {
-            let sucesso = Math.random > 0.5;
+            let sucesso = Math.random() > 0.5;
 
             if (sucesso) {
                 resolve("Dados recebidos com sucesso");
@@ -34,7 +34,7 @@ buscaDadosdoServidor()
     .then((mensagem) => {
         console.log(mensagem);
     })
-    .catch((error) => {
+    .catch((erro) => {
         console.error(erro);
     });
 
