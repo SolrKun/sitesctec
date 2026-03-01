@@ -8,7 +8,7 @@
   "main": "app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx ts-node-dev app.ts"
+    "start": "npx ts-node-dev -r dotenv/config app.ts"
   },
   "dependencies": {
     "express": "^5.2.1",
